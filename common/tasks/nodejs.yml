@@ -16,7 +16,7 @@
 
 - name: Install Nodejs dependencies
   community.general.npm:
-    file: /app
+    path: /app
 
 #- name: Schema Setup
  # ansible.builtin.import_tasks:
