@@ -1,0 +1,23 @@
+#- name: demo
+ # debug:
+  #  msg: Nodejs
+
+- name: Configure Nodejs repo
+  ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>${log_file}
+
+- name: Install Nodejs
+  ansible.builtin.yum:
+    name: nodejs
+    state: installed
+
+- name: Importing App-Prereq
+  ansible.builtin.import_tasks:
+    file: app-prereq.yml
+
+- name: Install Nodejs dependencies
+  community.general.npm:
+    file: /app
+
+#- name: Schema Setup
+ # ansible.builtin.import_tasks:
+  #  file: app-prereq.yml
