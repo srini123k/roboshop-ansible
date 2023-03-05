@@ -1,7 +1,3 @@
-#- name: demo
- # debug:
-  #  msg: Nodejs
-
 - name: Configure Nodejs repo
   ansible.builtin.shell: curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 
@@ -23,6 +19,6 @@
     file: app-prereq.yml
   when: schema_type is defined
 
-- name: Ssystemd Setup
+- name: Systemd Setup
   ansible.builtin.import_tasks:
     file: systemd-setup.yml
