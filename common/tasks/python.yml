@@ -17,9 +17,9 @@
 
 - name: Schema Setup
   ansible.builtin.import_tasks:
-    file: app-prereq.yml
+    file: schema-setup.yml
   when: schema_type is defined
 
-- name: Ssystemd Setup
+- name: Systemd Setup
   ansible.builtin.import_tasks:
     file: systemd-setup.yml
