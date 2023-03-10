@@ -14,3 +14,5 @@
     name: node_exporter
     state: restarted
     enabled: yes
+    daemon_reload: yes
+    
