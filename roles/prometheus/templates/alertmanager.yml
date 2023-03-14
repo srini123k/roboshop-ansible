@@ -10,8 +10,8 @@ receivers:
       - to: srinikdevops0131@gmail.com      # you@example.com
         from: srinikdevops0131@gmail.com  # alertmanager@example.com
         smarthost: "email-smtp.us-east-1.amazonaws.com:587"
-        auth_username: "{{AKIA5NLXHH55YT43R4UM}}"
-        auth_password: "{{BObSPWIOrR1+mwUG6kEBFD5SzC/rfVzwawOwFKDaEuvt}}"
+        auth_username: "{{SES_SMTP_USERNAME}}"
+        auth_password: "{{SES_SMTP_PASSWORD}}"
         require_tls: true
 inhibit_rules:
   - source_match:
