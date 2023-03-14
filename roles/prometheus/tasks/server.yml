@@ -20,8 +20,8 @@
 - name: update Alerts Manager configuration
   ansible.builtin.template:
     src: alertmanager.yml
-    dest: /opt/prometheus/alertmanager.yml
-  loop: "{{ alert_files }}"
+    dest: /opt/alertmanager/alertmanager.yml
+
 
 - name: Restart Alert Manager
   ansible.builtin.systemd:
