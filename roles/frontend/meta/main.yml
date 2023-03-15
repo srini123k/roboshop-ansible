@@ -1,4 +1,6 @@
 dependencies:
   - role: common
+  - role: elk
+
 
 
